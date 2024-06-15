@@ -1,0 +1,11 @@
+n = int(input(""))
+
+sum series = 0
+current_term = 1
+
+ for i in range(n):
+
+sum series += current_term
+
+current term = current_term + 10 + 1
+ print(sum_series
