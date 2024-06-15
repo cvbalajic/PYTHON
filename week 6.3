@@ -1,0 +1,28 @@
+def find_pivot_index(arr):
+# Calculate the sum of all elements in the array
+    total_sum = sum(arr)
+
+# Initialize the left sum to 0
+    left_sum = 0
+
+# Iterate over the array
+    for i in range(len(arr)):
+# Calculate the sum of all elements to the right of the current element
+        right_sum = total_sum - left_sum - arr[i]
+
+# If the left sum is equal to the right sum, return the index of the current element
+        if left_sum == right_sum:
+            return i
+
+# Update the left sum by adding the current element
+        left_sum += arr[i]
+
+# Read input from the user
+n = int(input())
+arr = [int(input()) for _ in range(n)]
+
+# Find the pivot index
+pivot_index = find_pivot_index(arr)
+
+# Print the pivot index
+print(pivot_index)
