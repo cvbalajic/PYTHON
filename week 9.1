@@ -1,0 +1,20 @@
+def automorphic(n):
+    try:
+        # Check if the input is an integer
+        n = int(n)
+        
+        # Calculate the square of the number
+        square = n * n
+        
+        # Convert both the number and its square to strings
+        str_n = str(n)
+        str_square = str(square)
+        
+        # Check if the number is a suffix of its square
+        if str_square.endswith(str_n):
+            return "Automorphic"
+        else:
+            return "Not Automorphic"
+    except ValueError:
+        return "Invalid input"
+    
