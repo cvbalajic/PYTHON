@@ -1,0 +1,14 @@
+import math
+def calculate_tiles():
+    values = input("").split()
+    pool_diameter = float(values[0])
+    tile_size = float(values[1])
+    pool_diameter_cm = pool_diameter * 100
+    pool_area = math.pi * (pool_diameter_cm / 2) ** 2
+    tile_area = tile_size ** 2
+    if int(pool_diameter) % 2 != 0:
+        num_tiles = math.ceil(pool_area / tile_area) + 100
+    else:
+        num_tiles = math.ceil(pool_area / tile_area)
+    print(num_tiles, "tiles")
+calculate_tiles()
