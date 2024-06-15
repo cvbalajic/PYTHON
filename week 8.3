@@ -1,0 +1,18 @@
+a = int(input())
+s = [input() for _ in range(a)]
+d = {}
+sum = 0
+for i in s:
+    b = i.split(" ")
+    for j in b:
+        if j.isalpha():
+            w = j
+        elif j.isdigit():
+            sum += int(j)
+        else:
+            pass
+    d[w] = sum
+    sum = 0
+sort_d = dict(sorted(d.items(), key=lambda item: item[1]))
+for key, value in sort_d.items():
+    print(f"{key} {value}")
