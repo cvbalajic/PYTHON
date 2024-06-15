@@ -1,0 +1,15 @@
+num =int(input())
+
+ num_str =str(num)
+
+ digit_count={}
+for digit in num_str:
+if digit in digit_count:
+else:
+digit_count[digit] =1
+digit_count[digit] += 1
+ non_repeated_count =0
+for count in digit_count.values():
+if count ==1:
+non_repeated_count +=1
+print(non_repeated_count)
