@@ -1,0 +1,10 @@
+a=int(input())
+s=[input() for _ in range(a)]
+c=0
+for i in s:
+    if s.count(i)>c:
+        cw=i
+        c=s.count(i)
+    else:
+        pass
+print(cw)   
