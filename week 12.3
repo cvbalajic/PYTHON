@@ -1,0 +1,35 @@
+
+def calculate_average_marks():
+    try:
+        n = int(input())
+        if n < 0 or n > 100:
+            raise ValueError("Invalid number of students")
+        
+        column_names = input().split()
+
+        if len(column_names) != 4 or not all(col.upper() in ["ID", "NAME", "MARKS", "CLASS"] for col in column_names):
+            raise ValueError("Invalid column names")
+
+        marks_index = column_names.index("MARKS")
+        total_marks = 0
+
+        for _ in range(n):
+            student_data = input().split()
+            if len(student_data) != 4:
+                raise ValueError("Invalid student data")
+
+            try:
+                total_marks += int(student_data[marks_index])
+            except ValueError:
+                raise ValueError("Invalid marks")
+
+        if n == 0:
+            average_marks = 0.00
+        else:
+            average_marks = total_marks / n
+        print("{:.2f}".format(average_marks))
+
+    except Exception as e:
+        print("Error:", str(e))
+
+calculate_average_marks()
