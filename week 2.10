@@ -1,0 +1,13 @@
+a=int(input())
+b=a/100
+c=b*4
+d=a+c
+e=d/100
+f=e*4
+g=d+f
+h=g/100
+i=h*4
+j=g+i
+print("Balance as of end of Year 1: $%.2f."%d)
+print("Balance as of end of Year 2: $%.2f."%g)
+print("Balance as of end of Year 3: $%.2f."%j)
