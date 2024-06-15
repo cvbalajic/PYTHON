@@ -1,0 +1,14 @@
+n = int(input())
+arr = list(map(int, input().split()))
+K = int(input())
+
+seen = set()
+
+
+for num in arr:
+    if K - num in seen:
+        print("Yes")
+        break
+    seen.add(num)
+else:
+    print("No")
