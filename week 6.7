@@ -1,0 +1,18 @@
+n=int(input())
+arr=[]
+for i in range(n):
+    e=int(input())
+    arr.append(e)
+
+m=int(input())
+arr1=[]
+for i in range(m):
+    e=int(input())
+    arr1.append(e)
+
+arr=set(arr)
+arr1=set(arr1)
+
+union=arr.union(arr1)
+u = ' '.join(map(str, union))
+print(u)
