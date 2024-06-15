@@ -1,0 +1,7 @@
+arr = list(map(int, input().split()))
+freq_dict = {}
+for num in arr:
+    freq_dict[num] = freq_dict.get(num, 0) + 1
+sorted_freq = sorted(freq_dict.items())
+for num, freq in sorted_freq:
+    print(num, freq)
