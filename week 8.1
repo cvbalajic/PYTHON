@@ -1,0 +1,67 @@
+a = int(input())
+s = [input() for _ in range(a)]
+dic = []
+tm=[]
+ass=[]
+lab=[]
+avg=[]
+for i in s:
+    co=0
+    b = i.split(" ")
+    sum=0
+    for j in b:
+        if j.isalpha():
+            w = j
+        elif j.isdigit():
+            co=co+1
+            sum+=int(j)
+            if(co==1):
+                tm.append(j)
+            elif(co==2):
+                ass.append(j)
+            elif(co==3):
+                lab.append(j)
+            else:
+                pass
+        else:
+            pass
+    dic.append(w)
+    avg.append(int(sum))
+#higest average score
+ts1=0
+for i in range(0,len(dic)):
+    if avg[i]>ts1:
+        w2=dic[i]
+        ts1=avg[i]
+    elif(avg[i]==ts1):
+        print(dic[i],end=" ")
+print(w2) 
+#assignment classe    
+ts = 0
+for i in range(0, len(dic)):
+    if int(ass[i])>ts:
+        w1 = dic[i]
+        ts = int(ass[i])
+    elif(int(ass[i])==ts):
+        print(w1,end=" ")
+        w1=dic[i]
+print(w1)
+#lowest lab mark
+ts2=int(max(lab))
+for i in range(0, len(dic)):
+    if int(lab[i])<ts2:
+        w3=dic[i]
+        ts2=int(lab[i])
+    elif(int(lab[i])==ts2):
+        print(dic[i],end=" ")
+print(w3)   
+#lowest average score
+ts3=max(avg)
+for i in range(0,len(dic)):
+    if avg[i]<ts3:
+        w4=dic[i]
+        ts3=avg[i]
+    elif(avg[i]==ts3):
+        print(dic[i],end=" ")
+print(w4) 
+        
