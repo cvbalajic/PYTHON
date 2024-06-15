@@ -1,0 +1,15 @@
+c=[]
+d=[]
+y=0
+z=int(input())
+for i in range(z):
+    a=int(input())
+    for i in range(a):
+        c.append(int(input()))
+    a=int(input())
+    for i in range(a):
+        y=int(input())
+        if(y in c):
+            d.append(y)
+    for i in d:
+        print(i,end=" ")
