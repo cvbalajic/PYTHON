@@ -1,0 +1,18 @@
+l=input().split()
+l=list(l)
+t=[eval(i) for i in l]
+l1=input().split()
+l2=input().split()
+t1=[eval(i) for i in l1]
+t2=[eval(i) for i in l2]
+t1_set=set(t1)
+t2_set=set(t2)
+count=0
+t1d=list(t1_set-(t1_set & t2_set))
+t2d=list(t2_set-(t1_set & t2_set))
+a=t1d+t2d
+for i in range(len(a)):
+    print(a[i],end=" ")
+    count+=1
+print(end="\n")
+print(count)
