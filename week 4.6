@@ -1,0 +1,10 @@
+N =int(input())
+ found =False
+for i in range(2,10):
+if N %i==0 and N // i<10:
+found=True
+break
+if found:
+print("Yes")
+else:
+print("No")
