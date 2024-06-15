@@ -1,0 +1,8 @@
+number =int(input())
+unique_digits = set()
+
+number_str =str(number)
+for digit in number_str:
+if digit.isdigit():
+unique_digits.add(digit)
+ print(len(unique_digits))
