@@ -1,0 +1,25 @@
+def is_increasing(lst):
+
+    increasing = all(lst[i] < lst[i+1] for i in range(len(lst)-1))
+    if increasing:
+        return True
+
+
+    for i in range(len(lst)):
+        temp_lst = lst[:i] + lst[i+1:]
+        if all(temp_lst[j] < temp_lst[j+1] for j in range(len(temp_lst)-1)):
+            return True
+
+    return False
+
+
+n = int(input())
+lst = []
+for _ in range(n):
+    lst.append(int(input()))
+
+
+result = is_increasing(lst) or is_increasing(lst[::-1])
+
+
+print(result)
