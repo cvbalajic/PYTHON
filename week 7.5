@@ -1,0 +1,6 @@
+l=input().split()
+n=[eval(i) for i in l]
+n.sort()
+for i in range(len(n)-1):
+    if(n[i]==n[i+1]):
+        print(n[i])
