@@ -1,0 +1,26 @@
+n = int(input())
+lstA = []
+lstB = []
+ele_input = input().split()
+for ele in ele_input:
+    try:
+        ele1 = int(ele)
+        lstA.append(ele1)
+    except ValueError:
+        print("Invalid input! Please enter an integer.")
+ele_input = input().split()
+for ele in ele_input:
+    try:
+        ele2 = int(ele)
+        lstB.append(ele2)
+    except ValueError:
+        print("Invalid input! Please enter an integer.")
+
+lst3 = []
+for i in range(n):
+    for j in range(n):
+        if lstA[i] == lstB[j]:
+            lst3.append(j)
+
+for i in lst3:
+    print(i,end=" ")
