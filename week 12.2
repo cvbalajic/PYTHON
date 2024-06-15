@@ -1,0 +1,13 @@
+def is_power_of_two(n):
+    # Check if n is positive
+    if n <= 0:
+        return False
+    
+    # Keep dividing n by 2 until it becomes 1 or odd
+    while n > 1:
+        if n % 2 != 0:
+            return False
+        n //= 2
+    
+    return True
+print(is_power_of_two(int(input())))
