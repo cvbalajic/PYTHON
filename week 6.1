@@ -1,0 +1,42 @@
+'''
+lis=[]
+
+for i in range(10):
+    a=int(input())
+    lis.append(a)
+
+num=int(input())
+
+new_lis=[]
+
+for i in lis[:]:
+    if (i<=num):
+        new_lis.append(i)
+        lis.remove(i)
+
+new_lis.append(num)
+r=len(new_lis)
+
+
+
+for i in lis:
+    if i>new_lis[r-1]:
+        new_lis.append(i)
+        r=r+1
+
+print(f"ITEM to be inserted:{num}")
+print("After insertion array is:")
+for i in new_lis:
+    print (i)
+
+'''
+a=[int(input()) for i in range(10)]
+e=int(input("ITEM to be inserted:"))
+print(e)
+a.append(e)
+a=sorted(a)
+
+print("After insertion array is:")
+for i in a:
+    print(i, end='\n')
+
