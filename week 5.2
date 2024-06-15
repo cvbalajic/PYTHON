@@ -1,0 +1,15 @@
+def find_substring(string1, string2):
+    # Find the index of string2 in string1
+    index = string1.find(string2)
+    # If string2 is found, return its index, otherwise return -1
+    return index if index != -1 else -1
+
+# Sample Input
+string1 = input()
+string2 = input()
+
+# Function call
+result = find_substring(string1, string2)
+
+# Output the result
+print(result)
