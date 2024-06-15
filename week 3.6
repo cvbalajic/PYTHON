@@ -1,0 +1,18 @@
+def leap_year(year):
+    if(year%400==0):
+        return 1
+    elif(year%100==0):
+        return 0
+    elif(year%4==0):
+        return 1
+    else:
+        return 0
+def main():
+    year=int(input())
+    b=leap_year(year)
+    if(b):
+        print(year,"is a leap year.")
+    else:
+        print(year,"is not a leap year.")
+if __name__=="__main__":
+    main()
