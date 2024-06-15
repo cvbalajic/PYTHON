@@ -1,0 +1,15 @@
+def count_words_with_min_length(S, L):
+    # Split the string into words using spaces as separators
+    words = S.split()
+
+    # Count the words with length at least L
+    count = sum(1 for word in words if len(word) >= L)
+
+    return count
+
+# Input: String S and minimum word length L
+S = input().strip()
+L = int(input())
+
+# Output: Number of words with length at least L
+print(count_words_with_min_length(S, L))
