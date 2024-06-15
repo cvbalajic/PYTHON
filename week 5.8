@@ -1,0 +1,15 @@
+string = input()
+alphabets = digits = special = 0
+
+for i in range(len(string)):
+    if string[i].isalpha():
+        alphabets += 1
+    elif string[i].isdigit():
+        digits += 1
+    else:
+        special += 1
+
+print(alphabets)
+print(digits)
+print(special)
+
