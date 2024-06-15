@@ -1,0 +1,17 @@
+def zip_lists(list1, list2):
+    return [x + y for x, y in zip(list1, list2)]
+
+# Sample Input
+m = int(input())
+n = int(input())
+
+list1 = [[int(input()) for j in range(n)] for i in range(m)]
+
+list2 = [[int(input()) for j in range(n)] for i in range(m)]
+
+# Zipping the lists
+zipped_list = zip_lists(list1, list2)
+
+# Output
+print(zipped_list)
+
