@@ -1,0 +1,21 @@
+def findWords(words):
+    row1 = set('qwertyuiop')
+    row2 = set('asdfghjkl')
+    row3 = set('zxcvbnm')
+    
+    result = []
+    for word in words:
+        lower_word = word.lower()
+        if set(lower_word) <= row1 or set(lower_word) <= row2 or set(lower_word) <= row3:
+            result.append(word)
+    if(result==[]):
+        print("No words")
+    else:
+        for i in result:
+            print(i)
+n=int(input())
+word=[]
+for i in range(0,n):
+    ele=input()
+    word.append(ele)
+findWords(word)
