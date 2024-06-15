@@ -1,0 +1,18 @@
+def compare_strings_lexicographically(s1, s2):
+    s1_lower = s1.lower()
+    s2_lower = s2.lower()
+
+    if s1_lower < s2_lower:
+        return -1
+    elif s1_lower > s2_lower:
+        return 1
+    else:
+        return 0
+
+T = int(input())
+
+for _ in range(T):
+    string1 = input()
+    string2 = input()
+
+    print(compare_strings_lexicographically(string1, string2))
