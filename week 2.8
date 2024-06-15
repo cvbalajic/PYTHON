@@ -1,0 +1,20 @@
+def can_buy_packet(N, chocolates):
+    results = []
+    for choco in chocolates:
+        if choco % N == 0:
+            results.append("True")
+        else:
+            results.append("False")
+    return results
+
+# Sample input
+N = int(input())
+chocolates = []
+
+for _ in range(4):
+    chocolates.append(int(input()))
+
+# Check if Mr. X can buy each packet
+output = can_buy_packet(N, chocolates)
+
+print(" ".join(output))
